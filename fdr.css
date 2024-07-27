@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    height: 100vh;
+    width:100%;
+background: -webkit-repeating-linear-gradient(135deg,red,blue);
+padding: 10px;
+
+}
+.todo{
+    width:500px;
+    background-color: white;
+    height: 300px;
+    padding:30px;
+margin:100px auto 10px;
+padding: 70px 30px 70px;
+border-radius: 10%;
+}
+.todo h1{
+    display: flex;
+
+}
+.inp{
+    display: flex;
+    align-items:center;
+justify-content: space-between;
+background-color: #edeef0;
+border-radius: 30PX;
+padding-left: 10px;
+margin-bottom: 30px;
+}
+.inp input{
+    flex: 1;
+    border: none;
+    outline:none;
+    padding: 10px;
+    background-color: transparent;
+}
+.inp button{
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 132, 0);
+    color: white;
+    cursor: pointer;
+}ul li {
+    list-style: none;
+    padding: 5px 8px 10px 30px; /* Adjusted padding to give space for the circle icon */
+    cursor: pointer;
+    font-size: 17px;
+    user-select: none;
+    position: relative; /* Needed for absolute positioning of span */
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    background-image: url('circleunchecked'); 
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-size: cover;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+ul li.check {
+    text-decoration: line-through;
+}
+
+ul li.check::before {
+    background-image: url('checked');
+    background-size: cover;
+}
+
+ul li span {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    height: 30px;
+    width: 30px;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+}
+ul li span:hover{
+background: rgb(128, 128, 125);
+}
